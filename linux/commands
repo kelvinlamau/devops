@@ -1,0 +1,10 @@
+# packages
+apt update
+apt upgrade
+apt dist-upgrade
+
+sudo apt install -y openssh-server
+sudo apt install -y nmap
+sudo apt install -y git
+
+

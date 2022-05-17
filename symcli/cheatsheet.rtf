@@ -1,0 +1,49 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red83\green83\blue83;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c40000\c40000\c40000;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15300\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+Symcfg discover\
+Symcfg list\
+\
+Symmaskdb list database\
+Symmaskdb list devs -wwn\
+Symmaskdb list assignment -dev\
+\
+Symmask -sid 123 refresh\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Symmask -sid 123 -wwn xxxx -dir 4a -p 0 add devs xxx,yyy\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Symmask -sid 123 -dir 4a -p 0 list logins\
+\
+\
+Symconfigure -sid xxx -f xxx verify/ preview/ commit\
+\
+\
+Symdg -sid 123 list\
+Symdg create xxxdg -type rdf1\
+\
+Symrdf -sid 123 -rdfg 3 -type rdf1 -file xxx.txt -g xxxdg query (xxx.txt is device pair file)\
+\
+\
+Symaccess -sid create \
+Symaccess -sid add\
+Symaccess -sid remove\
+Symaccess -sid replace -wwn -new_wwn\
+Symaccess -sid create view\
+Symaccess -sid list -type xxx \
+Symaccess -sid list no_assignments\
+Symaccess -sid 123 list logins -wwn 100000xxxxxx\
+\
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs22\fsmilli11426 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 symsg \'96sid 007 create myapp_sg \'96slo gold \'96workload oltpsymsg \'96sid 007 create myapp_sg \'96slo gold \'96workload oltp\
+symaccess \'96sid 007 create view \'96name myapp_mv \'96sg myapp_sg \'96pg myapp_pg \'96ig myapp_ig}

@@ -6,3 +6,4 @@
   tasks:
      - name: Echo a hello message
        command: echo hello
+       become: "yes"

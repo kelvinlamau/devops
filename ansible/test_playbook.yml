@@ -1,9 +1,22 @@
 ---
 - hosts: redhat
-  remote_user: ansibleuser
+  #  remote_user: ansibleuser
   vars:
      ansible_ssh_private_key_file: "~/.ssh/ANSIBLE"
   tasks:
      - name: Echo a hello message
        command: echo hello
-       become: "yes"
+       register: result
+
+     - name: display result
+       debug:
+          var: result.stdout
+
+     - name: install necessary packages
+       become: yes
+       package:
+          name: 
+            - traceroute
+            - git
+          state: latest
+

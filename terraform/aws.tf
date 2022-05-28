@@ -75,3 +75,4 @@ resource "aws_main_route_table_association" "default_route_lam_tf" {
   vpc_id         = aws_vpc.lam_tf_vpc.id
   route_table_id = aws_route_table.pri_route.id
 }
+
